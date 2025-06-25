@@ -23,7 +23,7 @@
         <constructor-arg ref="simpleGreetingService"></constructor-arg>
     </bean>
 <!--    注入不同的额实现的Service-->
-    <bean id="conotroller3" class="com.kg2s.contorller.GreetingController">
+    <bean id="controller3" class="com.kg2s.contorller.GreetingController">
         <constructor-arg ref="formalGreetingService"></constructor-arg>
     </bean>
 </beans>
