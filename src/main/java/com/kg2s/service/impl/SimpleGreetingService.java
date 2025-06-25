@@ -16,5 +16,6 @@ public class SimpleGreetingService implements GreetingService {
     public void setPrefix(String prefix) {
         this.prefix = prefix;
         System.out.println("SimpleGreetingService setPrefix");
+
     }
 }

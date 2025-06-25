@@ -16,6 +16,10 @@ public class GreetingController {
         this.greetingService = greetingService;
     }
     public void sayHello(String name ) {
-        greetingService.greeting(name);
+        System.out.println("sayHello .. " );
+        String message =  greetingService.greeting(name);
+
+        System.out.println("sayHello ... "  +" " + message);
+
     }
 }
