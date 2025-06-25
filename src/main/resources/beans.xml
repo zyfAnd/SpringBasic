@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="simpleGreetingService" class="com.kg2s.service.impl.SimpleGreetingService">
+            <!--   通过setter 注入     -->
+        <property name="prefix" value="Hello ya "></property>
+    </bean>
+    <bean id ="greetingController" class="com.kg2s.controller.GreetingController">
+        <property name="greetingService" ref="simpleGreetingService"></property>
+        
+    </bean>
+</beans>
