@@ -6,7 +6,7 @@ public class SimpleGreetingService implements GreetingService {
     String prefix  = "Hello, ";
 
     public SimpleGreetingService() {
-        System.out.println("SimpleGreetingService constructor");
+        System.out.println("SimpleGreetingService constructor 初始化");
     }
     @Override
     public String greeting(String name) {

@@ -15,5 +15,7 @@ public class Main {
 
         GreetingController controller2 = context.getBean("controller2", GreetingController.class);
         controller2.sayHello("Li Si");
+
+        context.getBean("controller3", GreetingController.class).sayHello("Wang wu");
     }
 }

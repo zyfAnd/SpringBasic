@@ -11,7 +11,16 @@
         <property name="greetingService" ref="simpleGreetingService"></property>
         
     </bean>
+    <!--    <-->
+    <bean id="formalGreetingService"  class="com.kg2s.service.impl.FormalGreetingService">
+
+    </bean>
     <bean id="controller2" class="com.kg2s.controller.GreetingController">
         <constructor-arg ref="simpleGreetingService"></constructor-arg>
     </bean>
+
+    <bean id="controller3" class="com.kg2s.controller.GreetingController">
+        <property name="greetingService" ref="formalGreetingService"></property>
+    </bean>
+
 </beans>
