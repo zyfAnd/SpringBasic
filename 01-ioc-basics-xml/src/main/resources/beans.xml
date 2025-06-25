@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    通过构造无参数实例话Service对象-->
+    <bean id="simpleGreetingService" class="com.kg2s.service.impl.SimpleGreetingService">
+<!--        通过setter 注入数据-->
+        <property name="prefix" value="Mr "></property>
+    </bean>
+
+<!--    不同的Service 实现 formal greeting service-->
+    <bean id="formalGreetingService" class="com.kg2s.service.impl.FormalGreetingService" >
+    </bean>
+
+<!--    通过无参构造方法实例化Contorller对象-->
+    <bean id="controller1" class="com.kg2s.contorller.GreetingController">
+<!--        通过 setter 方法注入service-->
+        <property name="greetingService" ref="simpleGreetingService"></property>
+    </bean>
+<!--通过有参构造方法注入 Service 同时实例化controller对象-->
+    <bean id="controller2" class="com.kg2s.contorller.GreetingController">
+        <constructor-arg ref="simpleGreetingService"></constructor-arg>
+    </bean>
+<!--    注入不同的额实现的Service-->
+    <bean id="conotroller3" class="com.kg2s.contorller.GreetingController">
+        <constructor-arg ref="formalGreetingService"></constructor-arg>
+    </bean>
+</beans>
