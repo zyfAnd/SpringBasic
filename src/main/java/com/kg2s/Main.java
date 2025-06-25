@@ -12,5 +12,8 @@ public class Main {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         GreetingController controller = context.getBean("greetingController", GreetingController.class);
         controller.sayHello("Zhang San");
+
+        GreetingController controller2 = context.getBean("controller2", GreetingController.class);
+        controller2.sayHello("Li Si");
     }
 }

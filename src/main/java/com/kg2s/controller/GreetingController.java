@@ -4,6 +4,7 @@ import com.kg2s.service.GreetingService;
 
 public class GreetingController {
      GreetingService greetingService;
+     //有参构造方法
     public GreetingController(GreetingService greetingService ) {
         this.greetingService = greetingService;
         System.out.println("GreetingController construct initialization with args ");
