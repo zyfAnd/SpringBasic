@@ -1,9 +1,15 @@
 package com.kg2s;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 public class Main {
     public static void main(String[] args) {
 
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("com.kg2s");
+        UserManager userManager = (UserManager) context.getBean("userManager");
+        userManager.sendMessage();
+
+        context.getBean(BatchNotifier.class).notifyUsers();
     }
 }
