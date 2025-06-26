@@ -22,7 +22,10 @@ public class UserController {
     public String getUsername(Long id ) {
         return userService.getUser(id);
     }
+
     public void deleteUser(Long id) {
         userService.deleteUser(id);
     }
+
+
 }

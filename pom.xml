@@ -18,6 +18,11 @@
         <module>06-spring-mvc</module>
         <module>07-data-access</module>
         <module>08-transaction</module>
+        <module>09-springboot</module>
+        <module>10-security</module>
+        <module>11-integration</module>
+        <module>12-test</module>
+        <module>13-cloud</module>
     </modules>
 
     <properties>
