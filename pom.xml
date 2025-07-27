@@ -23,6 +23,7 @@
         <module>11-integration</module>
         <module>12-test</module>
         <module>13-cloud</module>
+        <module>05-01-annotation-bean-manager</module>
     </modules>
 
     <properties>

@@ -3,8 +3,10 @@ package com.kg2s.dao.impl;
 
 import com.kg2s.dao.UserDao;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 @Component
+
 public class UserDaoImpl implements UserDao {
     public UserDaoImpl() {
         System.out.println("UserDaoImpl 构造方法被调用 初始化");
