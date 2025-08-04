@@ -8,12 +8,12 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-@Configuration  //创建Spring MVC的配置类 确保Spring的bean 被加载 扫描到
+@Configuration
+@EnableWebMvc
 @ComponentScan("com.kg2s")
-@EnableWebMvc  //开启SpringMVC注解驱动
-public class SpringConfig implements WebMvcConfigurer {
-    
-    // 视图解析器配置
+public class SpringMVCConfig implements WebMvcConfigurer {
+
+    // 视图解析器
     @Bean
     public InternalResourceViewResolver viewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
@@ -21,7 +21,7 @@ public class SpringConfig implements WebMvcConfigurer {
         resolver.setSuffix(".jsp");
         return resolver;
     }
-    
+
     // 静态资源处理
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
