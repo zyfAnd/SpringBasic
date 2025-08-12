@@ -7,8 +7,8 @@
         <groupId>com.kg2s</groupId>
         <artifactId>SpringBasic</artifactId>
         <version>1.0-SNAPSHOT</version>
-    </parent>
 
+    </parent>
     <artifactId>12-test</artifactId>
 
     <properties>
